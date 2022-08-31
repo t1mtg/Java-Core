@@ -41,10 +41,12 @@ public class Main {
     public static void merge(int[] a, int[] left, int[] right, int l, int r) {
         int i = 0, j = 0, k = 0;
         while (i < l && j < r) {
-            if (left[i] <= right[j])
+            if (left[i] <= right[j]) {
                 a[k++] = left[i++];
-            else
+            }
+            else {
                 a[k++] = right[j++];
+            }
         }
         while (i < l) {
             a[k++] = left[i++];

@@ -24,10 +24,12 @@ public class Main {
 
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                if (a[i][j] > maxValue)
+                if (a[i][j] > maxValue) {
                     maxValue = a[i][j];
-                if (a[i][j] < minValue)
+                }
+                if (a[i][j] < minValue) {
                     minValue = a[i][j];
+                }
                 sum += a[i][j];
             }
         }
