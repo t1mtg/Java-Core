@@ -121,6 +121,7 @@ public class ComplexExamples {
 
         Map<String, Long> groups = Arrays.stream(RAW_DATA)
                 .filter(Objects::nonNull)
+                .filter(person -> person.name != null)
                 .distinct()
                 .sorted(Comparator.comparingInt(Person::getId))
                 .collect(Collectors.groupingBy(Person::getName, Collectors.counting()));
@@ -163,6 +164,8 @@ public class ComplexExamples {
     }
 
     public static boolean fuzzySearch(String word, String line) {
+        if (word == null || line == null)
+            return false;
         int i = 0, j = 0;
         while (i < word.length() && j < line.length()) {
             if (word.charAt(i) == line.charAt(j)) {
