@@ -3,4 +3,4 @@
 
 * **Author:** Timofey Gurman
 * **Group:** M33041
-* **Telegram:** @timotege
+* **Telegram:** <t.me/timotege>
